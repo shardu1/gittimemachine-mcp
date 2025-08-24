@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: gittimemachine-mcp
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: gitpython>=3.1.45
+Requires-Dist: litellm>=1.75.9
+Requires-Dist: mcp[cli]>=1.13.1
