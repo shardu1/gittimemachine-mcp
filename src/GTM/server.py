@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GitTimeMachine MCP Server - AI-powered git history analysis for AI assistants.
+GitTimeMachine MCP Server - AI-powered git history analysis using AI assistants.
 """
 
 from fastmcp import FastMCP
@@ -148,4 +148,5 @@ if __name__ == "__main__":
         print(f"Git tools error: {e}", file=sys.stderr)
     
     # Run the FastMCP server
+
     mcp.run()
