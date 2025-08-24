@@ -41,3 +41,17 @@ cd gittimemachine-mcp
 
 # Run the automated installer (Windows/Mac/Linux)
 python install.py
+```
+
+## 🎯 Usage Guide  
+
+Once installed and configured, **GitTimeMachine** integrates seamlessly with your **Claude Desktop** or **Clauda Code**.  
+
+### Example Commands Supported  
+- `Open Clauda Code/Desktop`
+- `Use /path/to/your/git/repository for ananlysis`
+- `Show me the commit history of app.py`  
+- `Who last modified line 42 in main.py?`  
+- `Restore the version of server.js from commit abc123`  
+- `Switch to repository my-other-project`  
+
