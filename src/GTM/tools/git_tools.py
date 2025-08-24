@@ -1,7 +1,7 @@
 import os
 from git import Repo, GitCommandError
 from typing import Optional, Tuple
-from ..utils.helpers import find_git_root  # Keep your existing helper
+from ..utils.helpers import find_git_root  
 
 class GitTools:
     def __init__(self, repo_path: str = None):
@@ -16,7 +16,7 @@ class GitTools:
         
         absolute_path = os.path.abspath(start_path)
         
-        # If the path is a file, use its directory
+       
         if os.path.isfile(absolute_path):
             absolute_path = os.path.dirname(absolute_path)
         
@@ -28,7 +28,7 @@ class GitTools:
             
             parent_path = os.path.dirname(current_path)
             if parent_path == current_path:
-                return None  # Reached filesystem root
+                return None  
             current_path = parent_path
 
     def get_file_history(self, file_path: str, line_number: Optional[int] = None) -> Tuple[bool, str]:
@@ -78,4 +78,5 @@ class GitTools:
     def validate_file_path(self, file_path: str, repo_root: str) -> bool:
         """Check if file exists within the repository."""
         full_path = os.path.join(repo_root, file_path)
+
         return os.path.exists(full_path) and os.path.isfile(full_path)
