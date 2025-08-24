@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 GitTimeMachine MCP Server - AI-powered git history analysis using AI assistants.
 """
@@ -10,10 +9,9 @@ from .utils.logging_setup import setup_logging
 import os
 import sys
 
-# Initialize FastMCP
+
 mcp = FastMCP("git-time-machine")
 
-# Global variables
 git_tools = None
 llm_tools = LLMTools()
 logger = setup_logging()
@@ -46,7 +44,7 @@ def get_file_history(file_path: str, line_number: int = None, user_question: str
     if not git_tools or not git_tools.repo_root:
         return "❌ No repository selected. Please use set_repository_path() first to specify which git repository to analyze."
     
-    # Check if file exists in the repository
+
     full_path = os.path.join(git_tools.repo_root, file_path)
     if not os.path.exists(full_path):
         return f"❌ File not found in repository: {file_path}\nRepository root: {git_tools.repo_root}"
@@ -54,11 +52,6 @@ def get_file_history(file_path: str, line_number: int = None, user_question: str
     success, result = git_tools.get_file_history(file_path, line_number)
     if not success:
         return result
-    
-    # Add LLM summarization if available
-    if llm_tools.is_llm_available() and len(result.split('\n')) > 3:
-        summary = llm_tools.summarize_git_history(result, user_question or "What changed in this file?")
-        return summary
     
     return result
 
@@ -147,6 +140,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Git tools error: {e}", file=sys.stderr)
     
-    # Run the FastMCP server
-
     mcp.run()
+
