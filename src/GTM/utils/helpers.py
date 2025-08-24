@@ -11,10 +11,11 @@ def find_git_root(start_path: str = ".") -> Optional[str]:
         
         parent_path = os.path.dirname(current_path)
         if parent_path == current_path:
-            return None  # Reached filesystem root
+            return None  
         current_path = parent_path
 
 def validate_file_path(file_path: str, repo_root: str) -> bool:
     """Check if file exists within the repository."""
     full_path = os.path.join(repo_root, file_path)
+
     return os.path.exists(full_path) and os.path.isfile(full_path)
