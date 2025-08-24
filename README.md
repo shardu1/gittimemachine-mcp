@@ -27,7 +27,7 @@ This makes your AI assistant not just a code helper, but a **true collaborator**
 ## 🛠️ System Requirements  
 - Python **3.8+**  
 - Git installed & available in `PATH`  
-- Claude Desktop 
+- Claude Desktop (Download manually https://claude.ai/download)
 
 ---
 
