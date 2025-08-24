@@ -1,10 +1,6 @@
 # GitTimeMachine MCP Server  
 🚀 AI-powered Git history analysis & time-travel debugging for AI assistants  
 
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)  
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)  
-![MCP-Compatible](https://img.shields.io/badge/MCP-Compatible-success)  
-
 ---
 
 ## 📖 Overview  
